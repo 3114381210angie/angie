@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angie Paz - Portafolio Profesional</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info span {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .item-subtitle {
+            color: var(--primary-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .item-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #eff6ff;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid #bfdbfe;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Angie Paz</h1>
+            <p>Estudiante de Desarrollo Web & Sistemas</p>
+            <div class="contact-info">
+                <span>📍 Colombia</span>
+                <span>📧 Contacto Profesional</span>
+                <span>🔗 github.com/3114381210angie</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>👤 Perfil Profesional</h2>
+            <p>
+                Estudiante con interés en el desarrollo de software, maquetación web y administración de sistemas. Habilidad para el uso de herramientas de control de versiones como Git y GitHub, desarrollo web y solución de problemas técnicos de forma responsable e innovadora.
+            </p>
+        </section>
+
+        <section>
+            <h2>🎓 Educación y Formación</h2>
+            <div class="item">
+                <div class="item-title">Desarrollo Web & Tecnologías de la Información</div>
+                <div class="item-subtitle">Formación Académica en Tecnología</div>
+                <div class="item-date">En formación activa</div>
+                <p>Enfoque práctico en programación web, estructuras HTML/CSS, manejo de repositorios y sistemas informáticos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>💡 Habilidades Destacadas</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Python & Django</span>
+                <span class="skill-tag">Mantenimiento de Sistemas</span>
+                <span class="skill-tag">Canva & Diseño Visual</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>🚀 Proyectos y Prácticas</h2>
+            <div class="item">
+                <div class="item-title">Portafolio Web e Integración en GitHub</div>
+                <div class="item-date">2026</div>
+                <p>Creación y despliegue de un sitio web profesional utilizando control de versiones y hosting gratuito con GitHub Pages.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Angie Paz — Hoja de Vida y Portafolio Web</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
