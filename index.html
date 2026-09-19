@@ -26,172 +26,210 @@
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            padding: 20px;
+            padding: 2rem 1rem;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         header {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+            padding: 2.5rem;
+            border-radius: 1rem;
             text-align: center;
-            margin-bottom: 30px;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+            margin-bottom: 2rem;
         }
 
         header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
         header p {
             font-size: 1.1rem;
             opacity: 0.9;
-            font-weight: 300;
+            margin-bottom: 1.5rem;
         }
 
-        .contact-info {
+        .contact-badges {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 1rem;
             flex-wrap: wrap;
-            margin-top: 20px;
-            font-size: 0.95rem;
         }
 
-        .contact-info span {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 6px 14px;
-            border-radius: 20px;
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: white;
+            backdrop-filter: blur(5px);
+            transition: background 0.3s;
         }
 
-        section {
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .card {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 24px;
+            padding: 2rem;
+            border-radius: 1rem;
             border: 1px solid var(--border);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
-        h2 {
+        .card h2 {
             color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 16px;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 8px;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 0.5rem;
         }
 
-        .item {
-            margin-bottom: 20px;
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
         }
 
-        .item:last-child {
-            margin-bottom: 0;
+        .project-card {
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.2rem;
+            background: #fafafa;
         }
 
-        .item-title {
-            font-weight: 600;
+        .project-card h3 {
             font-size: 1.1rem;
             color: var(--text);
+            margin-bottom: 0.5rem;
         }
 
-        .item-subtitle {
-            color: var(--primary-dark);
-            font-weight: 500;
+        .project-card p {
             font-size: 0.95rem;
-        }
-
-        .item-date {
             color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-bottom: 6px;
+            margin-bottom: 0.8rem;
         }
 
-        .skills-grid {
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 0.5rem;
         }
 
         .skill-tag {
             background: #eff6ff;
             color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 8px;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
             font-weight: 500;
-            font-size: 0.9rem;
-            border: 1px solid #bfdbfe;
+            font-size: 0.85rem;
         }
 
         footer {
             text-align: center;
-            padding: 20px 0;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        
+        <!-- Encabezado Principal -->
         <header>
             <h1>Angie Paz</h1>
-            <p>Estudiante de Desarrollo Web & Sistemas</p>
-            <div class="contact-info">
-                <span>📍 Colombia</span>
-                <span>📧 Contacto Profesional</span>
-                <span>🔗 github.com/3114381210angie</span>
+            <p>Estudiante de Desarrollo Web & Soporte Técnico de Sistemas</p>
+            <div class="contact-badges">
+                <span class="badge">📍 Colombia</span>
+                <a href="https://github.com/3114381210angie" target="_blank" class="badge">🔗 github.com/3114381210angie</a>
             </div>
         </header>
 
-        <section>
+        <!-- Perfil Profesional -->
+        <div class="card">
             <h2>👤 Perfil Profesional</h2>
             <p>
-                Estudiante con interés en el desarrollo de software, maquetación web y administración de sistemas. Habilidad para el uso de herramientas de control de versiones como Git y GitHub, desarrollo web y solución de problemas técnicos de forma responsable e innovadora.
+                Estudiante entusiasta orientada al desarrollo web, maquetación de sitios, diseño gráfico interactivo y soporte informático. Con experiencia en la instalación y configuración de sistemas operativos, mantenimiento preventivo de equipos de cómputo, desarrollo de herramientas de software e integración de prototipos web.
             </p>
-        </section>
+        </div>
 
-        <section>
-            <h2>🎓 Educación y Formación</h2>
-            <div class="item">
-                <div class="item-title">Desarrollo Web & Tecnologías de la Información</div>
-                <div class="item-subtitle">Formación Académica en Tecnología</div>
-                <div class="item-date">En formación activa</div>
-                <p>Enfoque práctico en programación web, estructuras HTML/CSS, manejo de repositorios y sistemas informáticos.</p>
+        <!-- Proyectos e Implementaciones -->
+        <div class="card">
+            <h2>💻 Proyectos e Implementaciones</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>🔐 Gestor de Contraseñas</h3>
+                    <p>Desarrollo e implementación de un sistema para el almacenamiento y gestión segura de credenciales y contraseñas.</p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Seguridad</span>
+                        <span class="skill-tag">Desarrollo Web</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🌐 Páginas Web Interactiva</h3>
+                    <p>Creación y maquetación de sitios web visuales e interactivos utilizando herramientas como Google Stitch, HTML y CSS.</p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Diseño Web</span>
+                        <span class="skill-tag">Google Stitch</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🛠️ Mantenimiento y Sistemas Operativos</h3>
+                    <p>Formateo, instalación y optimización de sistemas operativos en equipos informáticos, así como mantenimiento físico y de software.</p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Sistemas Operativos</span>
+                        <span class="skill-tag">Hardware / Software</span>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>💡 Habilidades Destacadas</h2>
-            <div class="skills-grid">
+        <!-- Habilidades Técnicas -->
+        <div class="card">
+            <h2>💡 Habilidades Técnicas</h2>
+            <div class="skills-list">
                 <span class="skill-tag">HTML5 & CSS3</span>
                 <span class="skill-tag">Git & GitHub</span>
                 <span class="skill-tag">Python & Django</span>
-                <span class="skill-tag">Mantenimiento de Sistemas</span>
+                <span class="skill-tag">Mantenimiento de PC</span>
+                <span class="skill-tag">Instalación de S.O.</span>
+                <span class="skill-tag">Adobe Photoshop</span>
                 <span class="skill-tag">Canva & Diseño Visual</span>
+                <span class="skill-tag">Google Stitch</span>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>🚀 Proyectos y Prácticas</h2>
-            <div class="item">
-                <div class="item-title">Portafolio Web e Integración en GitHub</div>
-                <div class="item-date">2026</div>
-                <p>Creación y despliegue de un sitio web profesional utilizando control de versiones y hosting gratuito con GitHub Pages.</p>
-            </div>
-        </section>
+        <!-- Educación -->
+        <div class="card">
+            <h2>🎓 Educación y Formación</h2>
+            <h3>Desarrollo Web & Tecnologías de la Información</h3>
+            <p><strong>Formación Académica en Tecnología</strong></p>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
+                Enfoque práctico en programación web, maquetación HTML/CSS, desarrollo de software, mantenimiento de hardware y administración de sistemas informáticos.
+            </p>
+        </div>
 
         <footer>
-            <p>© 2026 Angie Paz — Hoja de Vida y Portafolio Web</p>
+            <p>© 2026 Angie Paz - Portafolio Profesional</p>
         </footer>
-
     </div>
 
 </body>
