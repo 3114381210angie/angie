@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida - Angie Paz</title>
+    <title>Hoja de Vida Profesional - Angie Paz</title>
     <style>
         :root {
-            --primary-color: #1e3a8a;
-            --secondary-color: #2563eb;
-            --dark-gray: #334155;
-            --light-bg: #f8fafc;
-            --border-color: #cbd5e1;
-            --white: #ffffff;
+            --primary-color: #0d47a1; /* Azul Cobalto llamativo y profesional */
+            --secondary-color: #1976d2; /* Azul brillante */
+            --accent-color: #0288d1; /* Azul cian vibrante para detalles */
+            --dark-gray: #1e293b;
+            --light-bg: #f0f4f8;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
@@ -29,102 +30,165 @@
         }
 
         .cv-container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
-            background: var(--white);
+            background: var(--card-bg);
             padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            border-top: 6px solid var(--primary-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(13, 71, 161, 0.12);
+            border-top: 8px solid var(--primary-color);
         }
 
         header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 2rem;
             margin-bottom: 2rem;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
+        }
+
+        .header-profile {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         .header-main h1 {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             color: var(--primary-color);
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            font-weight: 800;
         }
 
         .header-main h2 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--secondary-color);
             font-weight: 600;
             margin-top: 0.2rem;
         }
 
         .contact-info {
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             color: var(--dark-gray);
-            text-align: right;
+            background-color: #f8fafc;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
         }
 
         .contact-info p {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .contact-info a {
             color: var(--secondary-color);
             text-decoration: none;
+            font-weight: 600;
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 2.2rem;
         }
 
         section h3 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.3rem;
-            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .profile-text {
             text-align: justify;
-            font-size: 0.98rem;
+            font-size: 1rem;
+            background: #f8fafc;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
         }
 
-        .experience-item, .education-item {
+        .item-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.2rem;
+            border-radius: 6px;
             margin-bottom: 1.2rem;
+            transition: transform 0.2s ease;
+        }
+
+        .item-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
 
         .item-title {
             font-weight: bold;
-            font-size: 1.05rem;
-            color: var(--dark-gray);
+            font-size: 1.1rem;
+            color: var(--primary-color);
         }
 
         .item-date {
             font-size: 0.85rem;
             color: #64748b;
-            font-style: italic;
+            font-weight: 600;
+            background: #e0f2fe;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
         }
 
         .item-sub {
             font-weight: 600;
             color: var(--secondary-color);
             font-size: 0.95rem;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-attachment {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.6rem;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.83rem;
+            color: #ffffff;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-attachment:hover {
+            background-color: var(--secondary-color);
         }
 
         ul.bullets {
@@ -134,41 +198,42 @@
         }
 
         ul.bullets li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
         }
 
         .skill-category {
-            background: #f1f5f9;
-            padding: 1rem;
-            border-radius: 6px;
-            border-left: 4px solid var(--secondary-color);
+            background: #f8fafc;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
         }
 
         .skill-category h4 {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
         }
 
         .skill-category ul {
             list-style: none;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
 
         .skill-category li {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.3rem;
             position: relative;
-            padding-left: 1rem;
+            padding-left: 1.2rem;
         }
 
         .skill-category li::before {
-            content: "•";
+            content: "✓";
             color: var(--secondary-color);
             font-weight: bold;
             position: absolute;
@@ -177,24 +242,30 @@
 
         footer {
             text-align: center;
-            border-top: 1px solid var(--border-color);
+            border-top: 2px solid var(--border-color);
             padding-top: 1.5rem;
-            margin-top: 2rem;
-            font-size: 0.85rem;
+            margin-top: 2.5rem;
+            font-size: 0.88rem;
             color: #64748b;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .cv-container {
                 padding: 1.5rem;
             }
 
             header {
                 flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-profile {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
             .contact-info {
-                text-align: left;
+                width: 100%;
             }
         }
     </style>
@@ -203,71 +274,138 @@
 
     <div class="cv-container">
         
-        <!-- ENCABEZADO Y DATOS DE CONTACTO -->
+        <!-- ENCABEZADO Y DATOS REALES DE CONTACTO -->
         <header>
-            <div class="header-main">
-                <h1>Angie Paz</h1>
-                <h2>Atención al Cliente & Soporte Técnico</h2>
+            <div class="header-profile">
+                <!-- Foto de perfil (se activará cuando subas foto_perfil.jpg) -->
+                <img src="foto_perfil.jpg" alt="Foto de Angie Paz" class="profile-img" onerror="this.src='https://via.placeholder.com/150/0d47a1/ffffff?text=Tu+Foto'">
+                <div class="header-main">
+                    <h1>Angie Paz</h1>
+                    <h2>Técnica en Sistemas & Atención al Cliente</h2>
+                </div>
             </div>
+            
             <div class="contact-info">
-                <p>📍 Colombia</p>
-                <p>📧 Correo: contacto.angiepaz@email.com</p>
-                <p>🌐 Portafolio: <a href="https://github.com/3114381210angie" target="_blank">github.com/3114381210angie</a></p>
+                <p>📱 <strong>Teléfono:</strong> +57 311 438 1210</p>
+                <p>📧 <strong>Correo:</strong> angiepaz@email.com</p>
+                <p>📍 <strong>Dirección:</strong> Pasto, Nariño, Colombia</p>
+                <p>🌐 <strong>Portafolio:</strong> <a href="https://github.com/3114381210angie" target="_blank">github.com/3114381210angie</a></p>
             </div>
         </header>
 
         <!-- PERFIL PROFESIONAL -->
         <section>
-            <h3>Perfil Profesional</h3>
+            <h3>👤 Perfil Profesional</h3>
             <p class="profile-text">
-                Perfil orientado a la <strong>Atención al Cliente, Servicio al Usuario y Soporte Técnico</strong>. Cuento con capacidad comprobada para brindar una atención cordial, clara y eficiente de forma presencial y digital, gestionando peticiones, solicitudes y resolución de dudas o inconvenientes. Destaco por mi excelente comunicación, empatía, orientación al detalle y capacidad para guiar a los usuarios en la solución de problemas técnicos e informáticos con responsabilidad y compromiso.
+                Técnica en Sistemas con sólida formación y experiencia en <strong>Atención al Cliente, Servicio al Usuario y Soporte Técnico Informático</strong>. Destacada por el desarrollo de habilidades comunicativas, empatía y resolución eficiente de peticiones durante el desarrollo de prácticas laborales. Capaz de brindar asistencia técnica clara, gestionar atención presencial y digital, maquetar páginas web y brindar mantenimiento a equipos informáticos con alto sentido de responsabilidad, organización y compromiso.
             </p>
         </section>
 
-        <!-- EXPERIENCIA Y COMPETENCIAS -->
+        <!-- EDUCACIÓN Y FORMACIÓN ACADÉMICA -->
         <section>
-            <h3>Experiencia & Desempeño Práctico</h3>
+            <h3>🎓 Educación y Formación Académica</h3>
             
-            <div class="experience-item">
+            <div class="item-card">
                 <div class="item-header">
-                    <span class="item-title">Auxiliar de Atención al Cliente & Soporte</span>
-                    <span class="item-date">Presente</span>
+                    <span class="item-title">Técnico en Sistemas</span>
+                    <span class="item-date">Graduada</span>
                 </div>
-                <div class="item-sub">Servicio al Usuario y Soporte Informático</div>
+                <div class="item-sub">SENA / Instituto Técnico</div>
+                <p style="font-size: 0.9rem; color: #475569;">
+                    Formación integral en mantenimiento de hardware, ensamblaje de equipos, soporte de redes informáticas y servicio de asistencia técnica al usuario.
+                </p>
+                <!-- Botón para ver diploma -->
+                <a href="diploma1.jpg" target="_blank" class="btn-attachment">📜 Ver Diploma de Técnico en Sistemas</a>
+            </div>
+
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="item-title">Técnico en Desarrollo de Software & Web</span>
+                    <span class="item-date">Graduada</span>
+                </div>
+                <div class="item-sub">SENA / Instituto Técnico</div>
+                <p style="font-size: 0.9rem; color: #475569;">
+                    Capacitación en maquetación de portafolios web, HTML, CSS, JavaScript, lógica de programación y diseño de interfaces interactivas.
+                </p>
+                <!-- Botón para ver diploma -->
+                <a href="diploma2.jpg" target="_blank" class="btn-attachment">📜 Ver Diploma Técnico Web</a>
+            </div>
+
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="item-title">Bachiller Académico</span>
+                    <span class="item-date">Graduada</span>
+                </div>
+                <div class="item-sub">Institución Educativa Secondary</div>
+                <p style="font-size: 0.9rem; color: #475569;">
+                    Educación secundaria completa con énfasis académico.
+                </p>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA Y PRÁCTICAS LABORALES -->
+        <section>
+            <h3>💼 Experiencia y Prácticas Laborales</h3>
+            
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="item-title">Auxiliar de Atención al Cliente & Soporte Técnico</span>
+                    <span class="item-date">Prácticas Laborales</span>
+                </div>
+                <div class="item-sub">Pasantía / Prácticas Empresariales</div>
                 <ul class="bullets">
-                    <li>Recepción, orientación y atención directa a clientes y usuarios, garantizando un trato afable, respetuoso y profesional.</li>
-                    <li>Gestión y resolución de dudas, requerimientos y peticiones generales con agilidad y seguimiento oportuno.</li>
-                    <li>Asistencia a usuarios en el uso de herramientas tecnológicas, plataformas web y configuración de equipos.</li>
-                    <li>Registro y canalización adecuada de solicitudes o incidencias técnicas para asegurar la satisfacción del cliente.</li>
+                    <li><strong>Servicio al Cliente:</strong> Recepción y atención cordial de usuarios, brindando respuestas asertivas a sus consultas, solicitudes e inquietudes.</li>
+                    <li><strong>Gestión de Requerimientos:</strong> Registro, canalización y seguimiento oportuno de casos de soporte e incidencias técnicas.</li>
+                    <li><strong>Asistencia Técnica:</strong> Acompañamiento a usuarios en la configuración de equipos de cómputo, instalación de software y navegación web.</li>
+                    <li><strong>Soporte Operativo:</strong> Mantenimiento preventivo de equipos y organización de documentación técnica.</li>
+                </ul>
+                <!-- Botón para ver Carta Laboral -->
+                <a href="carta_laboral.jpg" target="_blank" class="btn-attachment" style="background-color: #15803d;">📄 Ver Carta Laboral / Certificado de Prácticas</a>
+            </div>
+        </section>
+
+        <!-- PROYECTOS Y REALIZACIONES -->
+        <section>
+            <h3>💻 Proyectos Desarrollados</h3>
+            
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="item-title">Desarrollo de Portafolio y Hoja de Vida Web</span>
+                    <span class="item-date">Proyecto</span>
+                </div>
+                <div class="item-sub">GitHub & Desarrollo Web (HTML/CSS)</div>
+                <ul class="bullets">
+                    <li>Diseño y maquetación de una plataforma web interactiva y responsiva alojada en GitHub Pages para la presentación de perfil profesional.</li>
+                    <li>Implementación de estilos modernos, estructura limpia de código e integración de certificación digital accesible online.</li>
                 </ul>
             </div>
 
-            <div class="experience-item">
+            <div class="item-card">
                 <div class="item-header">
-                    <span class="item-title">Desarrollo Web & Proyectos de Sistemas</span>
-                    <span class="item-date">Proyectos Académicos y Prácticos</span>
+                    <span class="item-title">Mantenimiento y Formateo de Equipos de Cómputo</span>
+                    <span class="item-date">Proyecto Práctico</span>
                 </div>
-                <div class="item-sub">Implementación Tecnológica</div>
+                <div class="item-sub">Soporte y Hardware</div>
                 <ul class="bullets">
-                    <li>Creación y diseño de interfaces claras y funcionales enfocadas en la experiencia del usuario (HTML, CSS).</li>
-                    <li>Mantenimiento informático, actualización de software y soporte preventivo para garantizar el buen funcionamiento de los sistemas.</li>
+                    <li>Configuración de unidades booteables de almacenamiento, optimización e instalación limpia de Sistemas Operativos Windows.</li>
+                    <li>Limpieza física, diagnóstico preventivo y reemplazo de partes mecánicas/electrónicas en impresoras y computadores.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- HABILIDADES -->
+        <!-- HABILIDADES CLAVE -->
         <section>
-            <h3>Habilidades Destacadas</h3>
+            <h3>🌟 Habilidades Destacadas</h3>
             <div class="skills-grid">
                 
                 <div class="skill-category">
-                    <h4>Atención al Cliente</h4>
+                    <h4>Atención & Servicio al Cliente</h4>
                     <ul>
-                        <li>Atención y Servicio al Cliente</li>
-                        <li>Escucha activa y Empatía</li>
-                        <li>Resolución de Conflictos</li>
-                        <li>Comunicación Clara y Asertiva</li>
-                        <li>Orientación al Resultado</li>
+                        <li>Atención al Cliente Presencial y Digital</li>
+                        <li>Escucha Activa y Comunicación Asertiva</li>
+                        <li>Empatía y Manejo de Inquietudes</li>
+                        <li>Orientación al Usuario</li>
+                        <li>Trabajo en Equipo y Colaboración</li>
                     </ul>
                 </div>
 
@@ -275,32 +413,18 @@
                     <h4>Competencias Técnicas</h4>
                     <ul>
                         <li>Soporte Técnico Informático</li>
-                        <li>Manejo de Office / Herramientas Web</li>
-                        <li>Maquetación HTML5 / CSS3</li>
-                        <li>Mantenimiento de Software</li>
-                        <li>Manejo de Sistemas Operativos</li>
+                        <li>Mantenimiento Preventivo / Correctivo</li>
+                        <li>Maquetación Web (HTML5 / CSS3)</li>
+                        <li>Uso de GitHub y Herramientas Web</li>
+                        <li>Herramientas Ofimáticas (Word, Excel)</li>
                     </ul>
                 </div>
 
             </div>
         </section>
 
-        <!-- EDUCACIÓN -->
-        <section>
-            <h3>Educación y Formación</h3>
-            <div class="education-item">
-                <div class="item-header">
-                    <span class="item-title">Formación en Tecnologías de la Información & Sistemas</span>
-                </div>
-                <div class="item-sub">Enfoque en Servicio, Soporte Técnico y Desarrollo</div>
-                <p style="font-size: 0.9rem; color: #475569;">
-                    Formación orientada al dominio de herramientas tecnológicas, comunicación asertiva con usuarios y gestión de proyectos digitales.
-                </p>
-            </div>
-        </section>
-
         <footer>
-            <p>Hoja de Vida Profesional — Angie Paz</p>
+            <p>Hoja de Vida Profesional — Angie Paz | Pasto, Nariño</p>
         </footer>
 
     </div>
